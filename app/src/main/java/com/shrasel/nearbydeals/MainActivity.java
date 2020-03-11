@@ -6,6 +6,8 @@ import android.content.Intent;
 import android.os.Bundle;
 import android.util.Log;
 import android.view.Gravity;
+import android.view.Menu;
+import android.view.MenuInflater;
 import android.view.View;
 import android.widget.EditText;
 import android.widget.Toast;
@@ -23,6 +25,13 @@ public class MainActivity extends AppCompatActivity {
 //        toast.setGravity(Gravity.TOP |Gravity.LEFT, 0, 20);
         toast.show();
         Log.i(TAG,"Step : On Create");
+    }
+
+    @Override
+    public boolean onCreateOptionsMenu(Menu menu) {
+        MenuInflater inflater = getMenuInflater();
+        inflater.inflate(R.menu.app_menu, menu);
+        return true;
     }
 
     public void onSendMessage(View view){
